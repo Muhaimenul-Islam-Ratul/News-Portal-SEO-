@@ -1,4 +1,4 @@
-# 🔍 Bangla SEO Roadmap 2026
+# Bangla SEO Roadmap 2026
 
 <div align="center">
 
@@ -17,12 +17,12 @@
 
 ## ✨ Features
 
-- 🗺️ **Interactive SEO & GEO Roadmap** — Visual roadmap with 9 core chapters
-- 📚 **50+ Practical Case Studies** — Real-world examples with code
-- 🔎 **Live SERP Simulator** — Real-time Google search preview
-- 🧩 **Schema JSON-LD Generator** — FAQ, Article, Local Business schemas
-- ✅ **50-Point SEO Audit Checklist** — Technical & AI search audit
-- 🤖 **AI-Powered SEO Tutor** — Bangla AI assistant (Gemini powered)
+- **Interactive SEO & GEO Roadmap** — Visual roadmap with 9 core chapters
+- **50+ Practical Case Studies** — Real-world examples with code
+- **Live SERP Simulator** — Real-time Google search preview
+- **Schema JSON-LD Generator** — FAQ, Article, Local Business schemas
+- **50-Point SEO Audit Checklist** — Technical & AI search audit
+- **AI-Powered SEO Tutor** — Bangla AI assistant (Gemini powered)
 
 ---
 
@@ -40,7 +40,7 @@
 
 ---
 
-## 🚀 Local এ Run করুন
+## Local এ Run করুন
 
 **Prerequisites:** Node.js 18+
 
@@ -60,14 +60,14 @@ App চলবে: **http://localhost:3000**
 
 ---
 
-## 🌐 Deploy
+## Deploy
 
 এই project Vercel-এ deployed। নিজে deploy করতে:
 
 1. Fork করুন এই repository
 2. [Vercel](https://vercel.com) এ import করুন
 3. Environment Variable এ `VITE_GEMINI_API_KEY` যোগ করুন
-4. Deploy করুন ✅
+4. Deploy করুন 
 
 ---
 
