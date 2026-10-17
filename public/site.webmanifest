@@ -1,0 +1,17 @@
+{
+  "name": "Bangla SEO Roadmap 2026",
+  "short_name": "Bangla SEO",
+  "description": "Master modern SEO, Technical Audits, and Generative Engine Optimization (GEO) with 50+ practical guides.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#eef2f7",
+  "theme_color": "#eef2f7",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

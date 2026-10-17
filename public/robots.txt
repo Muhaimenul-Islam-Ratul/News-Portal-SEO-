@@ -1,0 +1,49 @@
+# Robots.txt for Bangla SEO Roadmap
+# Optimized for Googlebot, Bingbot, and Generative AI Search Engines (GEO/AEO)
+
+User-agent: *
+Allow: /
+
+# Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Modern AI Search Crawlers (GEO / AEO Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Sitemap Index Link
+Sitemap: https://ais-pre-fkevn6v7fiqdm4x7kgfwry-701065023884.asia-southeast1.run.app/sitemap.xml
