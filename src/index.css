@@ -244,3 +244,18 @@
   animation: fadeInUltraSmooth 0.12s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   will-change: opacity;
 }
+
+/* Hero portrait float animation */
+@keyframes heroFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-hero-float {
+  animation: heroFloat 4s ease-in-out infinite;
+  will-change: transform;
+}

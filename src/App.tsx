@@ -98,69 +98,98 @@ export default function App() {
         {/* Neumorphic Hero Card (36-48px Poppins 600 Heading, 16px Inter 400 Body) */}
         {activeView === 'roadmap' && !searchQuery && (
           <div className="relative overflow-hidden p-6 sm:p-10 rounded-3xl bg-[#eef2f7] shadow-[10px_10px_24px_#cbd5e1,-10px_-10px_24px_#ffffff] border border-white/80 transition-all">
-            <div className="relative z-10 max-w-3xl space-y-4">
-              <div className="flex flex-wrap items-center justify-between gap-3">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#eef2f7] shadow-[inset_2px_2px_5px_#d1d9e6,inset_-2px_-2px_5px_#ffffff] text-amber-800 text-xs font-['Inter'] font-semibold tracking-wide border border-white/40">
-                  <Sparkles className="w-4 h-4 text-amber-600" />
-                  Complete SEO & AI Search Roadmap 2026
+            <div className="relative z-10 flex items-center gap-6 lg:gap-10">
+              {/* Left: Text Content */}
+              <div className="flex-1 min-w-0 space-y-4">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#eef2f7] shadow-[inset_2px_2px_5px_#d1d9e6,inset_-2px_-2px_5px_#ffffff] text-amber-800 text-xs font-['Inter'] font-semibold tracking-wide border border-white/40">
+                    <Sparkles className="w-4 h-4 text-amber-600" />
+                    Complete SEO & AI Search Roadmap 2026
+                  </div>
+
+                  {/* Owner / Creator Portfolio Link */}
+                  <a
+                    href="https://muhaimenul-islam-ratul.github.io/Muhaimenul-Islam/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="View Owner & Creator Portfolio"
+                    className="group inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#eef2f7] shadow-[3px_3px_8px_#d1d9e6,-3px_-3px_8px_#ffffff] hover:shadow-[inset_2px_2px_4px_#d1d9e6,inset_-2px_-2px_4px_#ffffff] border border-white/80 transition-[box-shadow,border-color] duration-150 cursor-pointer"
+                  >
+                    <img
+                      src="https://muhaimenul-islam-ratul.github.io/Muhaimenul-Islam/hero-portrait.png"
+                      alt="Muhaimenul Islam Ratul"
+                      className="w-6 h-6 rounded-full object-cover border border-amber-400 shadow-xs flex-shrink-0"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = "https://github.com/muhaimenul-islam-ratul.png";
+                      }}
+                    />
+                    <div className="flex items-center gap-1.5 text-left">
+                      <span className="text-[11px] text-stone-500 font-['Inter']">Owner:</span>
+                      <span className="text-xs font-['Poppins'] font-semibold text-stone-900 group-hover:text-amber-800 transition-colors">
+                        Muhaimenul Islam Ratul
+                      </span>
+                      <ExternalLink className="w-3.5 h-3.5 text-stone-400 group-hover:text-amber-700 ml-0.5" />
+                    </div>
+                  </a>
                 </div>
 
-                {/* Owner / Creator Portfolio Link */}
-                <a
-                  href="https://muhaimenul-islam-ratul.github.io/Muhaimenul-Islam/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="View Owner & Creator Portfolio"
-                  className="group inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#eef2f7] shadow-[3px_3px_8px_#d1d9e6,-3px_-3px_8px_#ffffff] hover:shadow-[inset_2px_2px_4px_#d1d9e6,inset_-2px_-2px_4px_#ffffff] border border-white/80 transition-[box-shadow,border-color] duration-150 cursor-pointer"
-                >
+                {/* Heading: Poppins, weight 600, size 36-48px */}
+                <h1 className="font-['Poppins'] font-semibold text-4xl sm:text-[42px] lg:text-[48px] text-[#1a202c] tracking-tight leading-[1.2]">
+                  Search Engine Optimization (SEO) & <br className="hidden sm:inline" />
+                  Modern AI Search (GEO / AEO) Guidelines
+                </h1>
+
+                {/* Body text: Inter, weight 400, size 16px */}
+                <p className="text-[16px] text-[#4a5568] leading-relaxed max-w-2xl font-normal font-['Inter']">
+                  Master Google's core algorithms, Technical SEO, Core Web Vitals, Content strategy, Link building, and modern Generative Engine Optimization (GEO) with detailed Bangla explanations and real-world case studies.
+                </p>
+
+                {/* Quick stats with Neumorphic chips */}
+                <div className="pt-2 flex flex-wrap items-center gap-3">
+                  <span className="px-3.5 py-1.5 rounded-xl bg-[#eef2f7] shadow-[4px_4px_10px_#d1d9e6,-4px_-4px_10px_#ffffff] text-[#4a5568] font-medium text-sm font-['Inter']">
+                    📁 9 Core Chapters
+                  </span>
+                  <span className="px-3.5 py-1.5 rounded-xl bg-[#eef2f7] shadow-[4px_4px_10px_#d1d9e6,-4px_-4px_10px_#ffffff] text-[#4a5568] font-medium text-sm font-['Inter']">
+                    ⚡ 50+ Practical Guides & Examples
+                  </span>
+                  <span className="px-3.5 py-1.5 rounded-xl bg-[#eef2f7] shadow-[4px_4px_10px_#d1d9e6,-4px_-4px_10px_#ffffff] text-[#4a5568] font-medium text-sm font-['Inter']">
+                    🛠️ Live SERP & Schema Toolkit
+                  </span>
+                  <span className="px-3.5 py-1.5 rounded-xl bg-[#eef2f7] shadow-[inset_2px_2px_5px_#d1d9e6,inset_-2px_-2px_5px_#ffffff] text-emerald-800 font-semibold text-sm font-['Inter'] border border-emerald-200/40">
+                    ✓ In-Depth Real-World Case Studies
+                  </span>
+                </div>
+              </div>
+
+              {/* Right: Dual-Layer Portrait — hidden on small screens */}
+              <div className="hidden md:flex flex-shrink-0 items-end justify-center relative w-64 lg:w-72 xl:w-80 self-stretch">
+                {/* Soft ambient glow base */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div className="w-60 h-60 lg:w-72 lg:h-72 rounded-full bg-amber-400/30 blur-3xl" />
+                </div>
+
+                {/* Stacked portrait container — both images overlap exactly */}
+                <div className="relative z-10 w-full max-h-72 lg:max-h-80 xl:max-h-[340px] animate-hero-float select-none">
+                  {/* Layer 1: Light background portrait (base) */}
                   <img
-                    src="https://muhaimenul-islam-ratul.github.io/Muhaimenul-Islam/hero-portrait.png"
-                    alt="Muhaimenul Islam Ratul"
-                    className="w-6 h-6 rounded-full object-cover border border-amber-400 shadow-xs flex-shrink-0"
+                    src="/hero-portrait-light.png"
+                    alt="Muhaimenul Islam Ratul — SEO Expert & Creator"
+                    className="w-full h-full object-contain object-bottom drop-shadow-2xl"
                     onError={(e) => {
-                      (e.target as HTMLImageElement).src = "https://github.com/muhaimenul-islam-ratul.png";
+                      (e.target as HTMLImageElement).src = "https://muhaimenul-islam-ratul.github.io/Muhaimenul-Islam/hero-portrait.png";
                     }}
                   />
-                  <div className="flex items-center gap-1.5 text-left">
-                    <span className="text-[11px] text-stone-500 font-['Inter']">Owner:</span>
-                    <span className="text-xs font-['Poppins'] font-semibold text-stone-900 group-hover:text-amber-800 transition-colors">
-                      Muhaimenul Islam Ratul
-                    </span>
-                    <ExternalLink className="w-3.5 h-3.5 text-stone-400 group-hover:text-amber-700 ml-0.5" />
-                  </div>
-                </a>
-              </div>
-
-              {/* Heading: Poppins, weight 600, size 36-48px */}
-              <h1 className="font-['Poppins'] font-semibold text-4xl sm:text-[42px] lg:text-[48px] text-[#1a202c] tracking-tight leading-[1.2]">
-                Search Engine Optimization (SEO) & <br className="hidden sm:inline" />
-                Modern AI Search (GEO / AEO) Guidelines
-              </h1>
-
-              {/* Body text: Inter, weight 400, size 16px */}
-              <p className="text-[16px] text-[#4a5568] leading-relaxed max-w-2xl font-normal font-['Inter']">
-                Master Google's core algorithms, Technical SEO, Core Web Vitals, Content strategy, Link building, and modern Generative Engine Optimization (GEO) with detailed Bangla explanations and real-world case studies.
-              </p>
-
-              {/* Quick stats with Neumorphic chips */}
-              <div className="pt-2 flex flex-wrap items-center gap-3">
-                <span className="px-3.5 py-1.5 rounded-xl bg-[#eef2f7] shadow-[4px_4px_10px_#d1d9e6,-4px_-4px_10px_#ffffff] text-[#4a5568] font-medium text-sm font-['Inter']">
-                  📁 9 Core Chapters
-                </span>
-                <span className="px-3.5 py-1.5 rounded-xl bg-[#eef2f7] shadow-[4px_4px_10px_#d1d9e6,-4px_-4px_10px_#ffffff] text-[#4a5568] font-medium text-sm font-['Inter']">
-                  ⚡ 50+ Practical Guides & Examples
-                </span>
-                <span className="px-3.5 py-1.5 rounded-xl bg-[#eef2f7] shadow-[4px_4px_10px_#d1d9e6,-4px_-4px_10px_#ffffff] text-[#4a5568] font-medium text-sm font-['Inter']">
-                  🛠️ Live SERP & Schema Toolkit
-                </span>
-                <span className="px-3.5 py-1.5 rounded-xl bg-[#eef2f7] shadow-[inset_2px_2px_5px_#d1d9e6,inset_-2px_-2px_5px_#ffffff] text-emerald-800 font-semibold text-sm font-['Inter'] border border-emerald-200/40">
-                  ✓ In-Depth Real-World Case Studies
-                </span>
+                  {/* Layer 2: Vivid-glow matrix portrait (multiply blend — yellow becomes deeper, richer amber halo) */}
+                  <img
+                    src="/hero-portrait-matrix.png"
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-contain object-bottom"
+                    style={{ mixBlendMode: 'multiply', opacity: 0.75 }}
+                  />
+                </div>
               </div>
             </div>
-
-            {/* Subtle soft gradient ambient orb */}
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-80 h-80 bg-amber-400/10 rounded-full blur-3xl pointer-events-none" />
           </div>
         )}
 

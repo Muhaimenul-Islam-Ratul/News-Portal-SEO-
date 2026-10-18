@@ -52,14 +52,14 @@ export const TopicDetailModal: React.FC<TopicDetailModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/40 backdrop-blur-xs animate-fade-in font-['Inter',sans-serif]">
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-6 bg-black/40 backdrop-blur-xs animate-fade-in font-['Inter',sans-serif]">
       <div 
-        className="relative w-full max-w-4xl max-h-[92vh] flex flex-col bg-[#eef2f7] rounded-3xl shadow-[16px_16px_36px_#cbd5e1,-16px_-16px_36px_#ffffff] border border-white/80 overflow-hidden"
+        className="relative w-full max-w-4xl max-h-[97vh] sm:max-h-[92vh] flex flex-col bg-[#eef2f7] rounded-t-3xl sm:rounded-3xl shadow-[16px_16px_36px_#cbd5e1,-16px_-16px_36px_#ffffff] border border-white/80 overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Soft Neumorphic Header */}
-        <div className="relative px-6 sm:px-8 py-6 bg-[#eef2f7] border-b border-[#d1d9e6]/70 shadow-[0_2px_10px_rgba(209,217,230,0.4)] flex-shrink-0">
-          <div className="flex items-center justify-between gap-4 mb-2.5">
+        <div className="relative px-4 sm:px-8 py-3 sm:py-6 bg-[#eef2f7] border-b border-[#d1d9e6]/70 shadow-[0_2px_10px_rgba(209,217,230,0.4)] flex-shrink-0">
+          <div className="flex items-center justify-between gap-2 mb-1.5 sm:mb-2.5">
             <div className="flex items-center gap-2 flex-wrap">
               <span className="text-xs font-['Inter'] font-semibold px-3 py-1 rounded-xl neu-button text-stone-800">
                 {topic.category}
@@ -92,10 +92,10 @@ export const TopicDetailModal: React.FC<TopicDetailModalProps> = ({
             </button>
           </div>
 
-          <div className="flex items-start justify-between gap-4">
+          <div className="flex items-start justify-between gap-3 mt-1 sm:mt-0">
             <div>
               {/* Heading: English first (Poppins 600), then Bangla below */}
-              <h2 className="font-['Poppins'] font-semibold text-2xl sm:text-3xl lg:text-[34px] text-[#1a202c] tracking-tight leading-snug">
+              <h2 className="font-['Poppins'] font-semibold text-xl sm:text-3xl lg:text-[34px] text-[#1a202c] tracking-tight leading-snug">
                 {topic.titleEn}
               </h2>
               <p className="text-amber-800 text-base sm:text-lg mt-1 font-medium font-['Hind_Siliguri','Inter']">
@@ -132,17 +132,17 @@ export const TopicDetailModal: React.FC<TopicDetailModalProps> = ({
           </div>
 
           {/* Quick Summary Inset Box */}
-          <div className="mt-4 p-3.5 rounded-2xl bg-[#eef2f7] shadow-[inset_3px_3px_6px_#d1d9e6,inset_-3px_-3px_6px_#ffffff] border border-white/60 text-stone-700 text-sm leading-relaxed font-['Inter']">
+          <div className="mt-2 sm:mt-4 p-2.5 sm:p-3.5 rounded-2xl bg-[#eef2f7] shadow-[inset_3px_3px_6px_#d1d9e6,inset_-3px_-3px_6px_#ffffff] border border-white/60 text-stone-700 text-sm leading-relaxed font-['Inter']">
             <span className="font-semibold text-amber-800">সারসংক্ষেপ: </span>
             {topic.summary}
           </div>
 
           {/* Neumorphic Tabs */}
-          <div className="flex items-center gap-2.5 mt-4 overflow-x-auto pb-1 text-sm font-['Inter']">
+          <div className="flex items-center gap-2 sm:gap-2.5 mt-2 sm:mt-4 overflow-x-auto pb-1 text-xs sm:text-sm font-['Inter']">
             <button
               type="button"
               onClick={() => setActiveTab('overview')}
-              className={`px-3.5 py-2 rounded-xl whitespace-nowrap font-semibold border transition-colors duration-150 ${
+              className={`px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl whitespace-nowrap font-semibold border transition-colors duration-150 ${
                 activeTab === 'overview'
                   ? 'neu-pressed text-amber-900 border-amber-400/60'
                   : 'neu-button text-stone-600 border-white/70'
@@ -153,7 +153,7 @@ export const TopicDetailModal: React.FC<TopicDetailModalProps> = ({
             <button
               type="button"
               onClick={() => setActiveTab('example')}
-              className={`px-3.5 py-2 rounded-xl whitespace-nowrap flex items-center gap-1.5 font-semibold border transition-colors duration-150 ${
+              className={`px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl whitespace-nowrap flex items-center gap-1.5 font-semibold border transition-colors duration-150 ${
                 activeTab === 'example'
                   ? 'neu-pressed text-amber-900 border-amber-400/60'
                   : 'neu-button text-stone-600 border-white/70'
@@ -165,7 +165,7 @@ export const TopicDetailModal: React.FC<TopicDetailModalProps> = ({
             <button
               type="button"
               onClick={() => setActiveTab('implementation')}
-              className={`px-3.5 py-2 rounded-xl whitespace-nowrap font-semibold border transition-colors duration-150 ${
+              className={`px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl whitespace-nowrap font-semibold border transition-colors duration-150 ${
                 activeTab === 'implementation'
                   ? 'neu-pressed text-amber-900 border-amber-400/60'
                   : 'neu-button text-stone-600 border-white/70'
@@ -177,7 +177,7 @@ export const TopicDetailModal: React.FC<TopicDetailModalProps> = ({
               <button
                 type="button"
                 onClick={() => setActiveTab('code')}
-                className={`px-3.5 py-2 rounded-xl whitespace-nowrap font-semibold border transition-colors duration-150 ${
+                className={`px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl whitespace-nowrap font-semibold border transition-colors duration-150 ${
                   activeTab === 'code'
                     ? 'neu-pressed text-amber-900 border-amber-400/60'
                     : 'neu-button text-stone-600 border-white/70'
@@ -189,7 +189,7 @@ export const TopicDetailModal: React.FC<TopicDetailModalProps> = ({
             <button
               type="button"
               onClick={() => setActiveTab('pitfalls')}
-              className={`px-3.5 py-2 rounded-xl whitespace-nowrap font-semibold border transition-colors duration-150 ${
+              className={`px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl whitespace-nowrap font-semibold border transition-colors duration-150 ${
                 activeTab === 'pitfalls'
                   ? 'neu-pressed text-amber-900 border-amber-400/60'
                   : 'neu-button text-stone-600 border-white/70'
@@ -201,7 +201,7 @@ export const TopicDetailModal: React.FC<TopicDetailModalProps> = ({
         </div>
 
         {/* Modal Body: Inter 400, 16px */}
-        <div className="flex-1 overflow-y-auto p-6 sm:p-8 space-y-6 text-[#2d3748] text-[16px] leading-relaxed">
+        <div className="flex-1 overflow-y-auto p-4 sm:p-8 space-y-6 text-[#2d3748] text-[16px] leading-relaxed">
           {activeTab === 'overview' && (
             <div className="space-y-6">
               {/* Detailed Description */}
@@ -398,7 +398,7 @@ export const TopicDetailModal: React.FC<TopicDetailModalProps> = ({
         </div>
 
         {/* Modal Footer Navigation */}
-        <div className="px-6 py-4 bg-[#eef2f7] border-t border-[#d1d9e6]/70 flex items-center justify-between flex-shrink-0 text-sm font-['Inter']">
+        <div className="px-4 sm:px-6 py-3 sm:py-4 bg-[#eef2f7] border-t border-[#d1d9e6]/70 flex items-center justify-between flex-shrink-0 text-sm font-['Inter']">
           {prevTopic ? (
             <button
               onClick={() => onSelectTopic(prevTopic)}
