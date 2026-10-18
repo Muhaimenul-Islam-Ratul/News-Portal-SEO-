@@ -161,33 +161,22 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Right: Dual-Layer Portrait — hidden on small screens */}
+              {/* Right: Portrait — hidden on small screens */}
               <div className="hidden md:flex flex-shrink-0 items-end justify-center relative w-64 lg:w-72 xl:w-80 self-stretch">
-                {/* Soft ambient glow base */}
+                {/* Soft ambient glow behind portrait */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   <div className="w-60 h-60 lg:w-72 lg:h-72 rounded-full bg-amber-400/30 blur-3xl" />
                 </div>
 
-                {/* Stacked portrait container — both images overlap exactly */}
-                <div className="relative z-10 w-full max-h-72 lg:max-h-80 xl:max-h-[340px] animate-hero-float select-none">
-                  {/* Layer 1: Light background portrait (base) */}
-                  <img
-                    src="/hero-portrait-light.png"
-                    alt="Muhaimenul Islam Ratul — SEO Expert & Creator"
-                    className="w-full h-full object-contain object-bottom drop-shadow-2xl"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = "https://muhaimenul-islam-ratul.github.io/Muhaimenul-Islam/hero-portrait.png";
-                    }}
-                  />
-                  {/* Layer 2: Vivid-glow matrix portrait (multiply blend — yellow becomes deeper, richer amber halo) */}
-                  <img
-                    src="/hero-portrait-matrix.png"
-                    alt=""
-                    aria-hidden="true"
-                    className="absolute inset-0 w-full h-full object-contain object-bottom"
-                    style={{ mixBlendMode: 'multiply', opacity: 0.75 }}
-                  />
-                </div>
+                {/* Portrait */}
+                <img
+                  src="/hero-portrait-light.png"
+                  alt="Muhaimenul Islam Ratul — SEO Expert & Creator"
+                  className="relative z-10 w-full max-h-72 lg:max-h-80 xl:max-h-[340px] object-contain object-bottom drop-shadow-2xl select-none animate-hero-float"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = "https://muhaimenul-islam-ratul.github.io/Muhaimenul-Islam/hero-portrait.png";
+                  }}
+                />
               </div>
             </div>
           </div>
