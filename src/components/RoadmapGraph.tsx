@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { SeoTopic, SEO_SECTIONS } from '../data/seoRoadmapData';
 import { 
   ZoomIn, ZoomOut, RotateCcw, CheckCircle, Bookmark, Sparkles, 
-  Layers, Compass, ChevronDown, ChevronRight, Lightbulb, ArrowRight, ExternalLink
+  Layers, Compass, ChevronDown, ChevronRight, Lightbulb, ArrowRight
 } from 'lucide-react';
 
 interface RoadmapGraphProps {
@@ -156,19 +156,8 @@ export const RoadmapGraph: React.FC<RoadmapGraphProps> = ({
             className="transition-transform duration-150 origin-top flex flex-col items-center w-full max-w-4xl py-6"
             style={{ transform: `scale(${zoomLevel})` }}
           >
-            {/* Top Roadmap.sh style Header Card (Neumorphic Soft Box) */}
-            <div className="w-full max-w-3xl flex flex-col sm:flex-row items-center justify-between gap-5 p-6 rounded-3xl bg-[#eef2f7] shadow-[8px_8px_20px_#d1d9e6,-8px_-8px_20px_#ffffff] border border-white/80 mb-10">
-              {/* Left Related Roadmaps */}
-              <div className="p-3.5 rounded-2xl bg-[#eef2f7] shadow-[inset_2px_2px_5px_#d1d9e6,inset_-2px_-2px_5px_#ffffff] text-xs space-y-1.5 w-full sm:w-auto border border-white/50">
-                <span className="font-['Poppins'] font-semibold text-stone-800 block text-xs">সম্পর্কিত রোডম্যাপসমূহ:</span>
-                <div className="flex flex-wrap gap-1.5 text-stone-600 font-['Inter']">
-                  <span className="neu-flat-sm px-2 py-0.5 rounded-md text-[11px] font-medium">✓ Frontend</span>
-                  <span className="neu-flat-sm px-2 py-0.5 rounded-md text-[11px] font-medium">✓ HTML</span>
-                  <span className="neu-flat-sm px-2 py-0.5 rounded-md text-[11px] font-medium">✓ CSS</span>
-                  <span className="neu-flat-sm px-2 py-0.5 rounded-md text-[11px] font-medium">✓ JavaScript</span>
-                </div>
-              </div>
-
+            {/* Top Roadmap Header Card (Neumorphic Soft Box) */}
+            <div className="flex flex-col items-center justify-center px-8 py-5 rounded-3xl bg-[#eef2f7] shadow-[8px_8px_20px_#d1d9e6,-8px_-8px_20px_#ffffff] border border-white/80 mb-10">
               {/* Center Title */}
               <div className="text-center">
                 <div className="inline-block px-7 py-2.5 rounded-2xl bg-[#eef2f7] shadow-[6px_6px_14px_#cbd5e1,-6px_-6px_14px_#ffffff] border border-white/90 text-stone-900 font-['Poppins'] font-semibold text-2xl tracking-wider">
@@ -177,29 +166,6 @@ export const RoadmapGraph: React.FC<RoadmapGraphProps> = ({
                 <span className="block text-xs font-['Inter'] text-stone-600 font-medium mt-1.5">
                   সার্চ ইঞ্জিন ও এআই অপ্টিমাইজেশন রোডম্যাপ
                 </span>
-              </div>
-
-              {/* Right Owner Badge */}
-              <div className="text-center sm:text-right w-full sm:w-auto">
-                <span className="text-[11px] text-stone-500 font-['Inter'] block">রোডম্যাপ নির্মাতা ও ওনার</span>
-                <a
-                  href="https://muhaimenul-islam-ratul.github.io/Muhaimenul-Islam/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Muhaimenul Islam Ratul Portfolio"
-                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#eef2f7] shadow-[inset_2px_2px_5px_#d1d9e6,inset_-2px_-2px_5px_#ffffff] text-xs font-semibold text-stone-800 hover:text-amber-800 transition-colors border border-white/60"
-                >
-                  <img
-                    src="https://muhaimenul-islam-ratul.github.io/Muhaimenul-Islam/hero-portrait.png"
-                    alt="Muhaimenul Islam Ratul"
-                    className="w-5 h-5 rounded-full object-cover border border-amber-400"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = "https://github.com/muhaimenul-islam-ratul.png";
-                    }}
-                  />
-                  <span>Muhaimenul Islam Ratul</span>
-                  <ExternalLink className="w-3 h-3 text-stone-400" />
-                </a>
               </div>
             </div>
 
